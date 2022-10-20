@@ -36,7 +36,4 @@
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>
-  <ItemGroup>
-    <Library Include="Build\TwoGD.lib" />
-  </ItemGroup>
 </Project>

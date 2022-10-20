@@ -18,23 +18,10 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="Source\assetloader.cpp" />
-    <ClCompile Include="Source\console.cpp" />
-    <ClCompile Include="Source\render.cpp" />
-    <ClCompile Include="Source\types.cpp" />
-    <ClCompile Include="Source\windows.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Source\twogd.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <Library Include="Build\TwoGD.lib" />
-  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{12AC0D30-3C95-4E3C-B50F-73F72C1EA6D7}</ProjectGuid>
-    <RootNamespace>TwoGD</RootNamespace>
+    <ProjectGuid>{A97D54BF-50D0-4A82-ACCC-86D8287AC3CA}</ProjectGuid>
+    <RootNamespace>TGD</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -83,18 +70,18 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>$(SolutionDir)$(projectname)\Build</OutDir>
+    <TargetName>TwoGD</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>$(SolutionDir)$(projectname)\Build</OutDir>
+    <TargetName>TwoGD</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>$(SolutionDir)$(projectname)\Build</OutDir>
+    <TargetName>TwoGD</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <OutDir>$(SolutionDir)$(projectname)\Build</OutDir>
+    <TargetName>TwoGD</TargetName>
   </PropertyGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
@@ -102,7 +89,7 @@
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
   </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
@@ -138,6 +125,16 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Source\assetloader.cpp" />
+    <ClCompile Include="Source\console.cpp" />
+    <ClCompile Include="Source\render.cpp" />
+    <ClCompile Include="Source\types.cpp" />
+    <ClCompile Include="Source\windows.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Source\twogd.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

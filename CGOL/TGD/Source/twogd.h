@@ -69,7 +69,7 @@ extern int __WAY wWinMain(HINSTANCE h_Instance, HINSTANCE, PWSTR c_pCmdLine, int
 namespace win {
 	const static DWORD dw_ExStyle = 0;
 	const static wchar_t* c_WinClassName = L"WINCLASSEWS";
-	const static wchar_t* c_WinTitle = L"360Capture";
+	const static wchar_t* c_WinTitle = L"CGOL-TGD";
 	const static DWORD  dw_Style = (WS_OVERLAPPED | WS_SYSMENU | WS_MINIMIZEBOX);
 	const static int i_XPos = CW_USEDEFAULT;
 	const static int i_YPos = CW_USEDEFAULT;
@@ -86,6 +86,7 @@ namespace win {
 		WNDCLASS w_WndClass;
 		POINT p_CursorPos;
 		void(*v_pMouseDown)();
+		void(*v_pMouseUp)();
 	}GDWIN;
 
 }

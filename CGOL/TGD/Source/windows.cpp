@@ -73,9 +73,15 @@ HANDLE __WAY CreateExec(HINSTANCE h_Instance) {
 }
 long __WAY WindowProc(HWND hd_Handle, UINT msg_Message, WPARAM wParam, LPARAM lParam)
 {
-	if (msg_Message == WM_LBUTTONDOWN) {
+	if (msg_Message == WM_LBUTTONDOWN ) {
 		if (gd_win.v_pMouseDown != NULL) {
 			gd_win.v_pMouseDown();
+		}
+		return 0;
+	}
+	if (msg_Message == WM_LBUTTONUP) {
+		if (gd_win.v_pMouseUp != NULL) {
+			gd_win.v_pMouseUp();
 		}
 		return 0;
 	}
@@ -90,7 +96,7 @@ long __WAY WindowProc(HWND hd_Handle, UINT msg_Message, WPARAM wParam, LPARAM lP
 		return 0;
 	}
 
-	return DefWindowProcW(hd_Handle, msg_Message, wParam, lParam);
+	return DefWindowProcA(hd_Handle, msg_Message, wParam, lParam);
 }
 void  SetScreenBuffer(DWORD * dw_ColorStream, int i_dWidth, int di_Height) {
 	HBITMAP bmp_Bitmap = CreateBitmap(i_dWidth, di_Height, 1, 8 * 4, (const void *)dw_ColorStream);
